@@ -1,0 +1,19 @@
+{
+  "name": "speedsquareholder",
+  "version": "1.0.0",
+  "description": "Website update for speedsquareholder.com",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.15.0",
+    "gulp": "^3.9.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tomas Cordero",
+  "license": "ISC"
+}
