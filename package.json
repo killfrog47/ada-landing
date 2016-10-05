@@ -1,10 +1,12 @@
 {
-  "name": "speedsquareholder",
+  "name": "American-Diabetes-Association",
   "version": "1.0.0",
-  "description": "Website update for speedsquareholder.com",
+  "description": "",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
+    "bourbon": "^4.2.7",
+    "bourbon-neat": "^1.8.0",
     "browser-sync": "^2.15.0",
     "gulp": "^3.9.1",
     "gulp-notify": "^2.2.0",

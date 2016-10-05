@@ -1,0 +1,316 @@
+@import 'bourbon/bourbon';
+@import 'base/base';
+@import 'neat/neat';
+@import 'mixins/mixins';
+@import 'grid-settings';
+
+body, html {
+    padding: 0;
+    margin: 0;
+    background: $dark-gray;
+}
+header {
+    height: auto;
+    @include outer-container();
+    position: relative;
+    .marquee {
+        background: url('/assets/images/marquee.jpg');
+        @include aspect-ratio(1440,700);
+        background-size: contain;
+        @include media($tablet) {
+            @include aspect-ratio(1000,700);
+            background-size: cover;
+            background-position: center;
+        }
+        @include media($mobile) {
+            @include aspect-ratio(1,1);
+            background-size: cover;
+            background-position: center;
+        }
+        // padding: 40px 75px;
+        .container {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            padding: 40px 75px;
+            @include media($mobile) {
+                padding: 40px 40px;
+            }
+            .logo {
+                position: relative;
+                display: block;
+                @include hide-text;
+                background: url('/assets/images/logo.svg');
+                width: 140px;
+                height: 40px;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .red-bar {
+                width: 100%;
+                height: 10px;
+                position: relative;
+                background: $red;
+                margin: 20px 0 55px ;
+            }
+            h1 {
+                font-size: em(48);
+                color: $white;
+                text-transform: uppercase;
+                width: 410px;
+                // @include span-columns(4);
+                font-weight: $font-light;
+                line-height: 1;
+                span {
+                    font-weight: $font-black;
+                }
+
+            }
+            @include media($mobile) {
+                h1 {
+                    font-size: em(22);
+                    width: 100%;
+                }
+                .red-bar {
+                    margin: 20px 0 20px;
+                }
+            }
+        }
+    }
+    .hero-info {
+        background: $blue;
+        width: 400px;
+        float: right;
+        // padding: 30px;
+        position: absolute;
+        right: 75px;
+        top: 92%;
+        color: $white;
+        @include media($tablet-mobile) {
+            position: relative;
+            width: 100%;
+            right: 0;
+            top: 0;
+        }
+        .hero-info_header {
+            font-weight: $font-light;
+            font-size: em(14);
+            line-height: 1.714;
+            background: $dark-blue;
+            padding: 25px 30px;
+            p {
+                margin: 0;
+            }
+            span {
+                font-weight: $font-bold;
+            }
+            @include media($tablet-mobile) {
+                padding: 25px 75px;
+            }
+            @include media($mobile) {
+                padding: 25px 40px;
+            }
+        }
+        .hero-info_content {
+            padding: 25px 30px;
+            p {
+                font-weight: $font-regular;
+                font-size: em(14);
+                line-height: 1.714;
+                margin-bottom: 24px;
+            }
+            ul {
+                li {
+                    margin-left: 55px;
+                    position: relative;
+                    font-weight: $font-regular;
+                    font-size: em(14);
+                    span {
+                        font-weight: $font-light;
+                    }
+                    &:first-child {
+                        margin-bottom: 18px;
+                    }
+                    &.insulin::before {
+                        display: block;
+                        position: absolute;
+                        left: -55px;
+                        content: '';
+                        height: 36px;
+                        width: 36px;
+                        background: url('/assets/images/insulin.png');
+                        background-repeat: no-repeat;
+                        background-position: center;
+
+                    }
+                    &.fingersticks::before {
+                        display: block;
+                        position: absolute;
+                        left: -55px;
+                        content: '';
+                        height: 36px;
+                        width: 36px;
+                        background: url('/assets/images/sticks.png');
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+                }
+            }
+            @include media($tablet-mobile) {
+                padding: 25px 75px;
+            }
+            @include media($mobile) {
+                padding: 25px 40px;
+            }
+        }
+    }
+}
+section.main-content {
+    width: 100%;
+    background: $white;
+    .container {
+        padding: 60px 75px 145px;
+        @include outer-container();
+        @include media($mobile) {
+            padding: 30px 40px 60px;
+        }
+
+        .copy {
+            @include span-columns(6.5);
+
+            h2 {
+                font-size: em(30);
+                font-weight: $font-medium;
+                color: $blue;
+                margin: 0;
+                line-height: 1.6;
+            }
+            p {
+                font-size: em(24);
+                font-weight: $font-light;
+                line-height: 1.6;
+                margin-bottom: 55px;
+            }
+            .find-walgreens {
+                position: relative;
+                text-align: center;
+                display: block;
+                width: 265px;
+                background: $light-gray;
+                height: 80px;
+                img {
+                    display: block;
+                    @include center-y();
+                    margin: 0 auto;
+                }
+            }
+            @include media($tablet-mobile) {
+                @include span-columns(12);
+                h2 {
+                    font-size: em(28);
+                }
+                p {
+                    font-size: em(20);
+                }
+                .find-walgreens {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+section.finger-light-uses {
+    width: 100%;
+    background: $red;
+    .container {
+        padding: 60px 75px;
+        @include outer-container();
+        background: url('/assets/images/red-bg.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        @include media($mobile) {
+            padding: 30px 40px;
+        }
+        text-align: center;
+        color: $white;
+        p {
+            font-weight: $font-medium;
+            margin: 0;
+        }
+        ul {
+            font-weight: $font-light;
+        }
+        p,ul {
+            font-size: em(24);
+            line-height: 1.5;
+            @include media($mobile) {
+                font-size: em(20);
+            }
+        }
+    }
+}
+footer {
+    width: 100%;
+    background: $white;
+    .container {
+        padding: 60px 75px;
+        @include outer-container();
+        @include media($mobile) {
+            padding: 30px 40px;
+        }
+        .left {
+            @include span-columns(3);
+            @include media($mobile) {
+                @include span-columns(12);
+                margin-bottom: 20px;
+            }
+            p {
+                font-weight: $font-regular;
+                font-size: em(14);
+                line-height: 1.286;
+                margin-bottom: 20px;
+                span {
+                    font-weight: $font-bold;
+                }
+            }
+            ul.social {
+                li {
+                    display: inline-block;
+                    margin-right: 12px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+        .center {
+            @include span-columns(3);
+            @include media($mobile) {
+                @include span-columns(12);
+                margin-bottom: 20px;
+            }
+            p {
+                font-weight: $font-regular;
+                font-size: em(14);
+                line-height: 1.286;
+                color: $red;
+            }
+        }
+        .right {
+            @include span-columns(6);
+            @include media($mobile) {
+                @include span-columns(12);
+            }
+            p {
+                font-weight: $font-regular;
+                font-size: em(16);
+                line-height: 1.875;
+                span {
+                    font-weight: $font-medium;
+                }
+            }
+        }
+    }
+}
