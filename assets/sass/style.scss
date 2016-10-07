@@ -249,6 +249,26 @@ section.finger-light-uses {
                 font-size: em(20);
             }
         }
+        a.wallgreens-btn {
+            color: #ffffff;
+            font-weight: 300;
+            font-size: em(14);
+            letter-spacing: 2px;
+            padding: 8px;
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #d27a87;
+            width: 260px;
+            background: rgba(255,255,255,.08);
+            margin-top: 35px;
+            &:hover {
+                color: $white;
+            }
+            padding: 20px;
+            img {
+                margin-top: 5px;
+            }
+        }
     }
 }
 footer {
