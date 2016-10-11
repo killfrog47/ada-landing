@@ -4,10 +4,21 @@
     <meta charset=utf-8>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>American Diabetes Association</title>
+    <title>Shine a Light</title>
 
     <link rel="stylesheet" href="/assets/css/style.css" media="screen" />
     <link rel="icon" href="/favicon.ico?v=2">
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-85550344-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
 
 </head>
 <body>
@@ -15,7 +26,7 @@
     <header>
         <div class="marquee">
             <div class="container">
-                <a class="logo">American Diabetes Association</a>
+                <a target="_blank" href="http://www.diabetes.org/in-my-community/local-offices/phoenix-arizona/" onClick="trackOutboundLink('http://www.diabetes.org/in-my-community/local-offices/phoenix-arizona/')" class="logo">American Diabetes Association</a>
                 <div class="red-bar"></div>
                 <div class="hero-copy">
                     <h1><span>Be a shining light.</span> Help fund the fight to stop diabetes</h1>
@@ -47,7 +58,7 @@
                 <p>
                     700,000 children and adults in Arizona are living with diabetes. There is currently no cure. Donate at your local Walgreens and you’ll receive a special red finger light from the American Diabetes Association. Each donation helps fund critical research, advocacy and programs that improve the lives of all people affected by diabetes.
                 </p>
-                <a class="find-walgreens" href="#"><img src="/assets/images/find-a-walgreens.png" alt="" /></a>
+                <a class="find-walgreens" onClick="trackOutboundLink('https://www.walgreens.com/storelocator/find.jsp')" target="_blank" href="https://www.walgreens.com/storelocator/find.jsp"><img src="/assets/images/find-a-walgreens.png" alt="" /></a>
             </div>
         </div>
     </section>
@@ -61,7 +72,7 @@
                 <li>&#8226; Entertaining Pets</li>
                 <li>&#8226; Stocking Stuffers for Kids</li>
             </ul>
-            <a href="#" class="wallgreens-btn">
+            <a target="_blank" onClick="trackOutboundLink('https://www.walgreens.com/storelocator/find.jsp')" href="https://www.walgreens.com/storelocator/find.jsp" class="wallgreens-btn">
                 IN PARTNERSHIP WITH<br/>
                 <img src="/assets/images/walgreens-logo-white.png" alt="walgreens" />
             </a>
@@ -75,13 +86,13 @@
                 </p>
                 <ul class="social">
                     <li class="twitter">
-                        <a href="#"><img src="/assets/images/twitter.jpg" alt="twitter" /></a>
+                        <a target="_blank" onClick="trackOutboundLink('https://twitter.com/AmDiabetesPhx')" href="https://twitter.com/AmDiabetesPhx"><img src="/assets/images/twitter.jpg" alt="twitter" /></a>
                     </li>
                     <li class="facebook">
-                        <a href="#"><img src="/assets/images/facebook.jpg" alt="facebook" /></a>
+                        <a target="_blank" onClick="trackOutboundLink('https://www.facebook.com/adaphoenix')" href="https://www.facebook.com/adaphoenix"><img src="/assets/images/facebook.jpg" alt="facebook" /></a>
                     </li>
                     <li class="instagram">
-                        <a href="#"><img src="/assets/images/instagram.jpg" alt="instagram" /></a>
+                        <a target="_blank" onClick="trackOutboundLink('https://www.instagram.com/AmDiabetesAssn')" href="https://www.instagram.com/AmDiabetesAssn"><img src="/assets/images/instagram.jpg" alt="instagram" /></a>
                     </li>
                 </ul>
             </div>
@@ -104,4 +115,11 @@
         </div>
     </footer>
 </body>
+<script type="text/javascript">
+var trackOutboundLink = function(url) {
+   ga('send', 'event', 'outbound', 'click', url, {
+        'transport': 'beacon'
+   });
+}
+</script>
 </html>
